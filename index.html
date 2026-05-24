@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zulkefl Rehman | AI & NLP Developer Portfolio</title>
+    
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Portfolio of Zulkefl Rehman, an AI, Machine Learning, and NLP Developer. Student preparing for an AI Internship with practical experience in building intelligent pipelines and semantic matching networks.">
+    <meta name="keywords" content="Zulkefl Rehman, AI Intern, Machine Learning, Deep Learning, NLP, Natural Language Processing, TalentMatch, Streamlit, TensorFlow, Islamabad, Pakistan">
+    <meta name="author" content="Zulkefl Rehman">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- EmailJS Library for Form to Email -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+
+    <!-- Dynamic AI Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo" id="nav-logo">
+                <span class="logo-accent">&lt;</span>ZR<span class="logo-dot">.ai</span><span class="logo-accent">&gt;</span>
+            </a>
+            
+            <nav class="nav-links" id="nav-menu">
+                <a href="#home" class="nav-link active" id="link-home">Home</a>
+                <a href="#about" class="nav-link" id="link-about">About</a>
+                <a href="#skills" class="nav-link" id="link-skills">Skills</a>
+                <a href="#projects" class="nav-link" id="link-projects">Projects</a>
+                <a href="#certifications" class="nav-link" id="link-certifications">Certificates</a>
+                <a href="#contact" class="nav-link" id="link-contact">Contact</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-primary btn-sm cv-btn" id="btn-cv">
+                    <span>Hire Me</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content reveal-on-scroll">
+                <div class="hero-badge" id="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Seeking AI/ML Internship</span>
+                </div>
+                
+                <h1 class="hero-title" id="hero-title">
+                    Hi, I'm <span class="gradient-text">Zulkefl Rehman</span>
+                </h1>
+                
+                <h2 class="hero-subtitle" id="hero-subtitle">
+                    <span class="typewriter" id="typewriter-text"></span><span class="cursor">|</span>
+                </h2>
+                
+                <p class="hero-description" id="hero-desc">
+                    Aspiring Artificial Intelligence and Machine Learning specialist. I focus on core foundational algorithms, data analysis, and deploying interactive Natural Language Processing pipelines.
+                </p>
+                
+                <div class="hero-cta" id="hero-cta">
+                    <a href="#projects" class="btn btn-gradient" id="btn-view-work">
+                        <span>Explore Projects</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline" id="btn-get-touch">
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+                
+                <div class="hero-socials" id="hero-socials">
+                    <a href="https://github.com/Zulkefl" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/zulkefl-rehman-327130280" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:zulkeflrehman@gmail.com" class="social-icon" aria-label="Email">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                    <a href="tel:+923319856454" class="social-icon" aria-label="Phone">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual reveal-on-scroll reveal-delay-200">
+                <div class="avatar-wrapper" id="avatar-container">
+                    <div class="avatar-glow-ring ring-1"></div>
+                    <div class="avatar-glow-ring ring-2"></div>
+                    <div class="avatar-glow-ring ring-3"></div>
+                    <div class="avatar-frame">
+                        <img src="assets/profile-main.jpg" alt="Zulkefl Rehman Professional Headshot" class="avatar-img" id="avatar-img">
+                    </div>
+                    
+                    <!-- Floating high-tech badges -->
+                    <div class="floating-tech tech-nlp" id="tech-badge-nlp">
+                        <i class="fa-solid fa-brain"></i>
+                        <span>NLP</span>
+                    </div>
+                    <div class="floating-tech tech-tf" id="tech-badge-tf">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <span>TensorFlow</span>
+                    </div>
+                    <div class="floating-tech tech-py" id="tech-badge-py">
+                        <i class="fa-brands fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-down-indicator" id="scroll-indicator">
+            <span class="mouse">
+                <span class="wheel"></span>
+            </span>
+            <span class="scroll-text">Scroll to Explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section section-padding">
+        <div class="section-container">
+            <div class="section-header reveal-on-scroll">
+                <span class="section-tagline">// Core Profile</span>
+                <h2 class="section-title">Aspiring AI Specialist</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-visual reveal-on-scroll">
+                    <div class="workspace-frame" id="workspace-container">
+                        <div class="workspace-border-glow"></div>
+                        <img src="assets/profile-workspace.png" alt="Zulkefl Rehman working on Machine Learning code" class="workspace-img" id="workspace-img">
+                        <div class="workspace-overlay">
+                            <span class="terminal-text">zulkefl@ai-terminal:~$ python train.py</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-content reveal-on-scroll reveal-delay-200">
+                    <h3 class="about-heading" id="about-subheading">Passionate About Algorithmic Problem Solving</h3>
+                    <p class="about-text" id="about-text-1">
+                        I am a Computer Science student dedicated to Artificial Intelligence, Machine Learning, Deep Learning, and Natural Language Processing. Equipped with hands-on project experience, I focus on building intelligent models that extract structure and insights from text data.
+                    </p>
+                    <p class="about-text" id="about-text-2">
+                        I specialize in applying core Python frameworks—including TensorFlow, Scikit-learn, spaCy, and NLTK—to solve concrete data challenges. By combining clean data preprocessing with semantic vector matching, I build responsive user interfaces using Streamlit to make machine learning models highly interactive.
+                    </p>
+                    
+                    <div class="quick-stats" id="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-num gradient-text" id="stat-num-1">6,000+</div>
+                            <div class="stat-label">Resume Pairs Trained</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num gradient-text" id="stat-num-2">100%</div>
+                            <div class="stat-label">Internship Readiness</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-num gradient-text" id="stat-num-3">2+</div>
+                            <div class="stat-label">AI Certifications</div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-meta" id="about-meta">
+                        <div class="meta-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Based in Islamabad, Pakistan</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>CS Student | Aspiring AI Specialist</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section section-padding">
+        <div class="section-container">
+            <div class="section-header reveal-on-scroll">
+                <span class="section-tagline">// Verified Skills Stack</span>
+                <h2 class="section-title">My Technical Capabilities</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="skills-grid" id="skills-container">
+                <!-- Skill Category 1: Machine Learning -->
+                <div class="skill-category-card reveal-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon icon-purple">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h3 class="category-title">Machine Learning & DL</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Machine Learning Foundations</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar-fill" style="width: 0%" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Scikit-learn (ML Algorithms)</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar-fill" style="width: 0%" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Deep Learning (TensorFlow)</span>
+                                <span class="skill-percent">82%</span>
+                            </div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar-fill" style="width: 0%" data-width="82%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2: NLP -->
+                <div class="skill-category-card reveal-on-scroll reveal-delay-100">
+                    <div class="category-header">
+                        <div class="category-icon icon-cyan">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3 class="category-title">Natural Language Processing</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">spaCy & NLTK (Text Prep)</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar-fill" style="width: 0%" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">TF-IDF Vectorization</span>
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar-fill" style="width: 0%" data-width="92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Cosine Similarity Matching</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar-fill" style="width: 0%" data-width="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3: Core Programming -->
+                <div class="skill-category-card reveal-on-scroll reveal-delay-200">
+                    <div class="category-header">
+                        <div class="category-icon icon-pink">
+                            <i class="fa-brands fa-python"></i>
+                        </div>
+                        <h3 class="category-title">Core Development</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python Development</span>
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar-fill" style="width: 0%" data-width="92%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Data Analysis (Pandas & NumPy)</span>
+                                <span class="skill-percent">86%</span>
+                            </div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar-fill" style="width: 0%" data-width="86%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Streamlit UI Deployment</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar-wrapper">
+                                <div class="skill-bar-fill" style="width: 0%" data-width="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section section-padding">
+        <div class="section-container">
+            <div class="section-header reveal-on-scroll">
+                <span class="section-tagline">// Featured Capstone Project</span>
+                <h2 class="section-title">Cognitive Product Deployment</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="projects-grid spotlight-layout" id="projects-grid">
+                <!-- Project Spotlight: TalentMatch -->
+                <div class="project-card reveal-on-scroll spotlight-card">
+                    <div class="project-img-wrapper spotlight-wrapper">
+                        <div class="project-glow-overlay"></div>
+                        <div class="project-tech-icons">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">spaCy</span>
+                            <span class="tech-tag">scikit-learn</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">NLTK</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">NumPy</span>
+                        </div>
+                        <img src="assets/resume-match.png" alt="TalentMatch AI Resume Analyzer User Interface Mockup" class="project-img" id="project-main-image">
+                    </div>
+                    <div class="project-body">
+                        <div class="project-badge-tag"><i class="fa-solid fa-graduation-cap"></i> Final NAVTTC AI Course Project</div>
+                        <h3 class="project-card-title">TalentMatch AI Resume Screening & Analyzer</h3>
+                        <p class="project-card-text">
+                            This is my final NAVTTC AI Course Project. It represents the successful development and deployment of an end-to-end NLP intelligence pipeline replicating complex Applicant Tracking System (ATS) matching logic. Designed as a capstone application, it parses and compares raw resume files against structured job mandates using advanced vector space modeling.
+                        </p>
+                        <ul class="project-features">
+                            <li><i class="fa-solid fa-circle-check"></i> Replicated enterprise ATS screening algorithms trained on 6,000+ real resume-job pairs</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Designed custom spaCy + NLTK tokenization pipelines for lemmatization and text cleaning</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Implemented TF-IDF with bigram support and semantic Cosine Similarity scoring mechanics</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Deployed Streamlit web application rendering matching percentages and interactive gap analysis</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/Zulkefl/ATS_AI_Project" target="_blank" rel="noopener noreferrer" class="project-link-btn" id="link-proj-1-git">
+                                <i class="fa-brands fa-github"></i>
+                                <span>Codebase Repository</span>
+                            </a>
+                            <a href="https://atsaiproject-sbqfrew7rsn3veflhydt6g.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-link-btn highlight-link" id="link-proj-1-live">
+                                <i class="fa-solid fa-circle-play"></i>
+                                <span>Live System Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & AI Visual Section -->
+    <section id="certifications" class="certifications-section section-padding">
+        <div class="section-container">
+            <div class="section-header reveal-on-scroll">
+                <span class="section-tagline">// Professional Qualifications</span>
+                <h2 class="section-title">Certifications & Visualisations</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="cert-showcase-grid">
+                <!-- Cert Grid (Left Column) -->
+                <div class="certifications-grid">
+                    <!-- Cert 1 -->
+                    <div class="cert-card reveal-on-scroll">
+                        <div class="cert-card-glow"></div>
+                        <div class="cert-icon-wrapper icon-orange">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h3 class="cert-name">Huawei Cloud Certification</h3>
+                            <p class="cert-issuer">Huawei Technologies</p>
+                            <p class="cert-desc">
+                                Demonstrates technical competence in cloud computing architectures, cloud application management, and orchestrating cloud services.
+                            </p>
+                            <span class="cert-badge"><i class="fa-solid fa-certificate"></i> Verified Certification</span>
+                        </div>
+                    </div>
+
+                    <!-- Cert 2 -->
+                    <div class="cert-card reveal-on-scroll reveal-delay-200">
+                        <div class="cert-card-glow"></div>
+                        <div class="cert-icon-wrapper icon-purple">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <div class="cert-content">
+                            <h3 class="cert-name">NAVTTC Artificial Intelligence</h3>
+                            <p class="cert-issuer">National Vocational & Technical Training Commission</p>
+                            <p class="cert-desc">
+                                Specialized vocational training focusing on core Machine Learning models, Deep Neural Networks, and Natural Language Processing.
+                            </p>
+                            <span class="cert-badge"><i class="fa-solid fa-certificate"></i> Verified Qualification</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Generated AI Art Panel (Right Column) -->
+                <div class="ai-visual-panel reveal-on-scroll reveal-delay-300" id="ai-art-container">
+                    <div class="ai-visual-frame">
+                        <div class="ai-visual-glow"></div>
+                        <img src="assets/ai-visual.png" alt="Futuristic AI neural network glowing visualization generated by AI" class="ai-visual-img" id="ai-visual-img">
+                        <div class="ai-visual-overlay">
+                            <div class="overlay-badge">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                <span>Core Cognitive Model</span>
+                            </div>
+                            <span class="ai-overlay-desc">Simulated Artificial Intelligence Neural Net Node Mapping</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="section-container">
+            <div class="section-header reveal-on-scroll">
+                <span class="section-tagline">// Initiate Connection</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="contact-grid">
+                <!-- Contact info cards -->
+                <div class="contact-info reveal-on-scroll">
+                    <h3 class="contact-subheading" id="contact-info-header">Let's discuss my future internship</h3>
+                    <p class="contact-desc" id="contact-info-desc">
+                        I am actively applying for my first Machine Learning & NLP internship. If you are an interviewer or project leader seeking an enthusiastic student with hands-on practice, reach out directly!
+                    </p>
+                    
+                    <div class="info-list" id="contact-details-list">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">Direct Email</span>
+                                <a href="mailto:zulkeflrehman@gmail.com" class="info-value">zulkeflrehman@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">Direct Contact Number</span>
+                                <a href="tel:+923319856454" class="info-value">+92 331 9856454</a>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="info-text">
+                                <span class="info-label">Current Location Node</span>
+                                <span class="info-value">Islamabad, Pakistan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact form -->
+                <div class="contact-form-wrapper reveal-on-scroll reveal-delay-200">
+                    <form class="contact-form" id="portfolio-contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="form-name">Your Name / Organisation</label>
+                                <input type="text" id="form-name" required placeholder="Name or agency">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Your Reply-To Email</label>
+                                <input type="email" id="form-email" required placeholder="Your email address">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="form-subject">Subject of Inquiry</label>
+                            <input type="text" id="form-subject" required placeholder="AI Internship / Opportunity">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="form-message">Detailed Message Payload</label>
+                            <textarea id="form-message" rows="5" required placeholder="Write your message here..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-gradient btn-full" id="btn-submit-message">
+                            <span>Open Mail Application</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                        
+                        <!-- Form state notification -->
+                        <div class="form-notification" id="form-notification"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#home" class="footer-logo">
+                    <span class="logo-accent">&lt;</span>ZR<span class="logo-dot">.ai</span><span class="logo-accent">&gt;</span>
+                </a>
+                <p class="footer-text">
+                    Engineering intelligence and language pipelines. Designed for visual and technical excellence.
+                </p>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Zulkefl Rehman. All Rights Reserved. Crafted with pure CSS & JS.</p>
+                <a href="#home" class="scroll-top-btn" id="btn-scroll-top" aria-label="Scroll to Top">
+                    <i class="fa-solid fa-angle-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
